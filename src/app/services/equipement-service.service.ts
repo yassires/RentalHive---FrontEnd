@@ -8,7 +8,12 @@ import { Observable } from 'rxjs';
 export class EquipementServiceService {
 
   private baseUrl = 'localhost:8000/equipement' ;
+  private dataBaseUrl = 'https://fakestoreapi.com/products'
   constructor(private http : HttpClient) { }
+
+  getData() : Observable<any> {
+    return this.http.get(`${this.dataBaseUrl}`) 
+  }
 
   getEquipements() : Observable<any> {
     return this.http.get(`${this.baseUrl}`) 
