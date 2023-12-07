@@ -3,6 +3,7 @@
     height: 80vh;
     overflow: hidden;
     position: relative;
+    /* border: 2px solid red; */
 }
 
 .container::before {
