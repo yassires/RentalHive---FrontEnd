@@ -2,18 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 
+import {environment} from "../environments/environments" ;
+
 @Injectable({
   providedIn: 'root'
 })
 export class EquipementServiceService {
 
-  private baseUrl = 'localhost:8000/equipement' ;
+  private baseUrl = environment.baseUrl ;
+  private apiUrl = environment.apiUrl;
 
-  private dataBaseUrl = 'https://fakestoreapi.com/products'
   constructor(private http : HttpClient) { }
 
   getData() : Observable<any> {
-    return this.http.get(`${this.dataBaseUrl}`) 
+    return this.http.get(`${this.apiUrl}`) 
   }
   
   getEquipements() : Observable<any> {
