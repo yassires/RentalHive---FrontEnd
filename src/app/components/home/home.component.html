@@ -1,1 +1,10 @@
-<p>home works!</p>
+<div class="container">
+    <div class="card" *ngFor="let datum of data">
+        <img [src]="datum.image" alt="">
+        <h5>{{datum.title}}</h5>
+        <h5>{{datum.price}}</h5>
+        <div>
+            <button class="btn">rent</button>
+        </div>
+    </div>
+</div>
