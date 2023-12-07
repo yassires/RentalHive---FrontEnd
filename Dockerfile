@@ -4,9 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
-
 RUN npm install
-
+act us
 RUN npm install -g @angular/cli
 
 COPY . .
@@ -18,4 +17,3 @@ FROM nginx:latest
 COPY --from=build app/dist/rentalhive /usr/share/nginx/html
 
 EXPOSE 80
-
