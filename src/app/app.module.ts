@@ -9,6 +9,7 @@ import { InfoComponent } from './components/info/info.component';
 import { EquipementComponent } from './components/equipement/equipement.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeroComponent } from './components/hero/hero.component';
     InfoComponent,
     EquipementComponent,
     NavComponent,
-    HeroComponent
+    HeroComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
