@@ -1,20 +1,21 @@
+import { EquipementComponent } from './../equipement/equipement.component';
+import { EquipementServiceService } from './../../services/equipement-service.service';
 import { Component, OnInit } from '@angular/core';
-import { EquipementServiceService } from 'src/app/services/equipement-service.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  data : any[] = [] ;
+  data : any[]=[]
 
+  constructor(private equipementServiceService: EquipementServiceService ){}
 
-  constructor(private equipementService : EquipementServiceService){}
   ngOnInit(): void {
-      this.equipementService.getData().subscribe((data)=>{
-        this.data = data ;
-        console.log(data) ;
-      })  
+    this.equipementServiceService.getData().subscribe((data)=>{
+        this.data = data
+    })
   }
+ 
 }

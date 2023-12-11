@@ -8,8 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { InfoComponent } from './components/info/info.component';
 import { EquipementComponent } from './components/equipement/equipement.component';
 import { NavComponent } from './components/nav/nav.component';
+import { DevisComponent } from './components/devis/devis.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
     InfoComponent,
     EquipementComponent,
     NavComponent,
-    HeroComponent,
-    FooterComponent
+    DevisComponent, 
+    HeroComponent
   ],
   imports: [
     BrowserModule,

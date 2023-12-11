@@ -1,0 +1,32 @@
+<p>devis works!</p>
+
+<a routerLink="/equipements"> equipement</a>
+
+<h6>Devis:</h6>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Status</th>
+        <th>User</th>
+        <th>Equipement</th>
+        <th>Total Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let devis of devis">
+        <td>{{ devis.id }}</td>
+
+        <td>{{ devis.devisStatus }}</td>
+        <td>{{devis.demande.user.fullName}}</td>
+        <td>{{devis.demande.equipement.name}}</td>
+        <td>{{ devis.demande.equipement.dailyRentalCost }}</td>
+        
+      </tr>
+      </tbody>
+    </table>
+
+    <!-- <form action="" (submit)="">
+
+        <button type="submit" >button</button>
+    </form> -->
