@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { EquipementComponent } from './components/equipement/equipement.component';
 import { InfoComponent } from './components/info/info.component';
 import { DevisComponent } from './components/devis/devis.component';
+import { DemandeComponent } from './components/demande/demande.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
     path : 'devis', 
     component : DevisComponent, 
     title : 'Devis Page'
+  }, 
+  {
+    path : 'demande', 
+    component : DemandeComponent, 
+    title : 'Demande Page'
   }
 ];
 
