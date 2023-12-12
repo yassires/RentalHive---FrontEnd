@@ -10,6 +10,7 @@ import { EquipementComponent } from './components/equipement/equipement.componen
 import { NavComponent } from './components/nav/nav.component';
 import { DevisComponent } from './components/devis/devis.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { DemandeComponent } from './components/demande/demande.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { HeroComponent } from './components/hero/hero.component';
     EquipementComponent,
     NavComponent,
     DevisComponent, 
-    HeroComponent
+    HeroComponent, DemandeComponent
   ],
   imports: [
     BrowserModule,
