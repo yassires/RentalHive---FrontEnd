@@ -7,7 +7,7 @@ import { DemandeService } from 'src/app/services/Demande/demande.service';
   styleUrls: ['./demande.component.css']
 })
 export class DemandeComponent implements OnInit {
-  private data : any [] = [] ;
+  data : any [] = [] ;
 
   constructor(private demandeService : DemandeService){}
   ngOnInit(): void {
