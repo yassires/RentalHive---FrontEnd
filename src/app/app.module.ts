@@ -11,6 +11,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { DevisComponent } from './components/devis/devis.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { DemandeComponent } from './components/demande/demande.component';
+import { ContractComponent } from './contract/contract.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,12 @@ import { DemandeComponent } from './components/demande/demande.component';
     InfoComponent,
     EquipementComponent,
     NavComponent,
-    DevisComponent, 
-    HeroComponent, DemandeComponent
+    DevisComponent,
+    HeroComponent, DemandeComponent, ContractComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     HttpClientModule
   ],
   providers: [],
