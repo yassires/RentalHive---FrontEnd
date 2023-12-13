@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/app/environments/environments';
 
@@ -16,13 +16,14 @@ export class DevisServiceService {
   getDevis():Observable<any>{
     return this.http.get(`${environment.devisUrl}`)
   }
-
   showDevis(id : number): Observable<any> {
     return this.http.get(`${environment.devisUrl}showAll/${id}`)
   }
 
   updateStatus(status: string, id: number): Observable<any> {
-    return this.http.post(`${environment.devisUrl}updateStatus/${id}`, JSON.stringify(status));
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
+    const options = { headers };
+    return this.http.post(`${environment.devisUrl}updateStatus/${id}`, status,options);
     
   }
 

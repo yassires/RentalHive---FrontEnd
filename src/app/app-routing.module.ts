@@ -4,22 +4,34 @@ import { HomeComponent } from './components/home/home.component';
 import { EquipementComponent } from './components/equipement/equipement.component';
 import { InfoComponent } from './components/info/info.component';
 import { DevisComponent } from './components/devis/devis.component';
+import { DemandeComponent } from './components/demande/demande.component';
+import {ContractComponent} from "./contract/contract.component";
 
 const routes: Routes = [
   {
-    path : '', 
-    component : HomeComponent, 
+    path : '',
+    component : HomeComponent,
     title : 'Home Page'
-  }, 
+  },
   {
-    path : 'equipements', 
-    component : EquipementComponent, 
+    path : 'equipements',
+    component : EquipementComponent,
     title : 'Equipement Page'
-  }, 
+  },
   {
-    path : 'devis', 
-    component : DevisComponent, 
+    path : 'devis',
+    component : DevisComponent,
     title : 'Devis Page'
+  },
+  {
+    path : 'demande',
+    component : DemandeComponent,
+    title : 'Demande Page'
+  },
+  {
+    path : 'contract',
+    component : ContractComponent,
+    title : 'Contract Page'
   }
 ];
 

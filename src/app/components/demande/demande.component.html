@@ -1,0 +1,20 @@
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>start Date</th>
+        <th>end Date</th>
+        <th>Status</th>
+        <th>Created At</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let demande of data">
+        <td>{{ demande.id }}</td>
+        <td>{{ demande.start_date }}</td>
+        <td>{{demande.end_date}}</td>
+        <td>{{demande.status}}</td>
+        <td>{{ demande.created_at }}</td>
+      </tr>
+      </tbody>
+    </table>

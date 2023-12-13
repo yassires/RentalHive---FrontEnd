@@ -12,6 +12,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { DevisComponent } from './components/devis/devis.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { DevisModalComponent } from './components/devis-modal/devis-modal.component';
+import { DemandeComponent } from './components/demande/demande.component';
+import { ContractComponent } from './contract/contract.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,21 @@ import { DevisModalComponent } from './components/devis-modal/devis-modal.compon
     NavComponent,
     DevisComponent, 
     HeroComponent,
-    DevisModalComponent
+    DevisModalComponent,
+    DemandeComponent,
+    ContractComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DevisComponent,
+    HeroComponent, 
+    DemandeComponent, 
+    ContractComponent
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
