@@ -11,6 +11,7 @@
         <th>User</th>
         <th>Equipement</th>
         <th>Total Price</th>
+        <th>Action</th> 
       </tr>
       </thead>
       <tbody>
@@ -21,12 +22,20 @@
         <td>{{devis.demande.user.fullName}}</td>
         <td>{{devis.demande.equipement.name}}</td>
         <td>{{ devis.demande.equipement.dailyRentalCost }}</td>
+        <td>
+            <button (click)="test(devis.id)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Update
+             </button>
+             
+             <app-devis-modal [selectedDevisId]="selectedDevisId"></app-devis-modal>
+        </td>
         
       </tr>
       </tbody>
     </table>
 
-    <!-- <form action="" (submit)="">
+    <app-devis-modal></app-devis-modal>
 
-        <button type="submit" >button</button>
-    </form> -->
+
+    
+

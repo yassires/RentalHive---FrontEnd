@@ -9,27 +9,32 @@ import { environment } from 'src/app/environments/environments';
 
 export class DevisServiceService {
 
-  private devisUrl = environment.devisUrl ;
+  devisId : number = 0;
 
   constructor(private http : HttpClient) { }
 
   getDevis():Observable<any>{
-    return this.http.get(`${this.devisUrl}`)
+    return this.http.get(`${environment.devisUrl}`)
   }
-
-  
 
   showDevis(id : number): Observable<any> {
-    return this.http.get(`${this.devisUrl}showAll/${id}`)
+    return this.http.get(`${environment.devisUrl}showAll/${id}`)
   }
 
-  updateStatus(id :number) : Observable <any> {
-    return this.http.delete(`${this.devisUrl}updateStatus/${id}`) ;
-  } 
+  updateStatus(status: string, id: number): Observable<any> {
+    return this.http.post(`${environment.devisUrl}updateStatus/${id}`, JSON.stringify(status));
+    
+  }
 
   updateDevis(id: number, data: any): Observable<any> {
-    return this.http.put(`${this.devisUrl}updateDevis/${id}`, data);
+    return this.http.post(`${environment.devisUrl}updateDevis/${id}`, data);
   }
 
+  setDevisId(id: number){
+    this.devisId = id;
+  }
 
+  getDevisId(){
+    return this.devisId;
+  }
 }

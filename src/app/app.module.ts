@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { EquipementComponent } from './components/equipement/equipement.componen
 import { NavComponent } from './components/nav/nav.component';
 import { DevisComponent } from './components/devis/devis.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { DevisModalComponent } from './components/devis-modal/devis-modal.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { HeroComponent } from './components/hero/hero.component';
     EquipementComponent,
     NavComponent,
     DevisComponent, 
-    HeroComponent
+    HeroComponent,
+    DevisModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,8 @@ import {DevisServiceService} from "../../services/devis/devis-service.service";
 })
 export class DevisComponent implements OnInit{
   devis: any | undefined;
+  selectedDevisId: number = 0;
+
 
 
   constructor(private _devisService: DevisServiceService) {
@@ -20,7 +22,10 @@ export class DevisComponent implements OnInit{
           console.log(data);
           },
         );
-    
+  }
+
+  test(devisId: number) {
+    this._devisService.setDevisId(devisId)
   }
 
 }
